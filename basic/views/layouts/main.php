@@ -23,7 +23,7 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-<?php $this->beginBody() ?>
+<?php $this->beginBody();?>
 
 <div id="fh5co-wrapper">
     <div id="fh5co-page">
@@ -35,10 +35,32 @@ AppAsset::register($this);
                         <h1 id="fh5co-logo"><a href="<?php echo Yii::$app->homeUrl ?>"><img src="<?php echo Yii::$app->homeUrl."assets/images/mrpnew.png" ?>" style="height: 80px; width: 80px;" ></a></h1>
                         <nav id="fh5co-menu-wrap" role="navigation">
                             <ul class="sf-menu" id="fh5co-primary-menu">
-                                <li><a class="active" href="<?php echo Yii::$app->homeUrl ?>">Home</a></li>
-                                <li><a href="<?php echo Yii::$app->homeUrl ?>site/destination">Destination</a></li>
-                                <li><a href="<?php echo Yii::$app->homeUrl ?>site/rekomendasi">Rekomendasi</a></li>
-                                <li><a href="<?php echo Yii::$app->homeUrl ?>">Contact</a></li>
+                                <li>
+                                    <a class="<?php echo (Yii::$app->controller->action->id=='index')?'active':'';?>"
+                                        href="<?php echo Yii::$app->homeUrl ?>">Home</a>
+                                </li>
+                                <li>
+                                    <a class="<?php echo (Yii::$app->controller->action->id=='destination'
+                                                        || Yii::$app->controller->id=='destination'
+                                                        || Yii::$app->controller->id=='places')?'active':'';?>"
+                                        href="<?php echo Yii::$app->homeUrl ?>site/destination">Destination</a>
+                                    <ul class="fh5co-sub-menu">
+                                        <li><a href="<?php echo Yii::$app->homeUrl ?>destination/pantai">Pantai</a></li>
+                                        <li><a href="<?php echo Yii::$app->homeUrl ?>destination/terjun">Air Terjun</a></li>
+                                        <li><a href="<?php echo Yii::$app->homeUrl ?>destination/pemandian">Pemandian Umum</a></li>
+                                        <li><a href="<?php echo Yii::$app->homeUrl ?>destination/hiburan">Hiburan Keluarga</a></li>
+                                        <li><a href="<?php echo Yii::$app->homeUrl ?>destination/budaya">Budaya dan Sejarah</a></li>
+                                        <li><a href="<?php echo Yii::$app->homeUrl ?>destination/religi">Religi</a></li> 
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="<?php echo (Yii::$app->controller->action->id=='rekomendasi')?'active':'';?>"
+                                        href="<?php echo Yii::$app->homeUrl ?>site/rekomendasi">Rekomendasi</a>
+                                </li>
+                                <li>
+                                    <a class="<?php echo (Yii::$app->controller->action->id=='uji')?'active':'';?>"
+                                        href="<?php echo Yii::$app->homeUrl ?>site/uji">Uji Sentimen</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>

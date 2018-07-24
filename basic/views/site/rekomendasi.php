@@ -15,20 +15,22 @@
     $jsonBatbnc = json_encode($batbnc);
     $jsonBatskor = json_encode($batskor);
     $jsonDatnamkor = json_encode($datnamkor);
+    $this->title = 'Rekomendasi Objek Wisata';
 ?>
 
-<div class="fh5co-parallax" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/slider1.jpg"; ?>);" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
-                    <div class="fh5co-intro fh5co-table-cell">
-                        <h1 class="text-center">Contact Us</h1>
-                        <p>Made with love by the fine folks at <a href="http://freehtml5.co">FreeHTML5.co</a></p>
+<div class="fh5co-parallax" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/paralayang.jpg"; ?>);" data-stellar-background-ratio="0.5">
+        <div class="overlay-gradient"></div>
+                <div class="container">
+                    <div class="col-md-12 col-md-offset-0 text-center slider-text">
+                        <div class="slider-text-inner js-fullheight">
+                            <div class="desc">
+                                <br><br><br><br><br>
+                                <p><span>Malang Raya Pride</span></p>
+                                <h2>Recommend You The New Way</h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </div>
 
 <div id="fh5co-contact-section">
@@ -72,6 +74,9 @@
         </div>
     </div>
 </div>
+<div id="loader">
+    <img src="<?php echo Yii::$app->homeUrl."assets/images/loader.gif" ?>">
+</div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAipJSjfkVSMGCmL10xbDjrJyTCxL3Uslc&language=in&region=ID"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -96,6 +101,7 @@
     var jalan = [];
     var lokasi = []; // penampung maker supaya bisa menampilkan banyak marker dan dinamis
     var rute = []; // penampung rute
+    var markers = [];
     var btsbwh, btstgh, btsats;
     var bbtsbwh, bbtstgh, bbtsats;
 
@@ -130,6 +136,16 @@
             icon: icon,
             map: map
         });
+        markers.push(marker);
+    }
+    function deleteMarkers() {
+        setMapOnAll(null);
+        markers = [];
+    }
+    function setMapOnAll(map) {
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(map);
+        }
     }
 
     function addLokasi() {
@@ -143,6 +159,7 @@
         lokasiSaya = position.coords.latitude + "," + position.coords.longitude;
         document.getElementById("lat").value = position.coords.latitude;
         document.getElementById("long").value = position.coords.longitude;
+        addMarker(position.coords.latitude,position.coords.longitude);
         console.log(lokasiSaya);
     }
 
@@ -208,6 +225,8 @@
                 $("#list_rekom").show();
                 $("#tes").html(msg);
                 hapusRute();
+                deleteMarkers();
+                hideLoader();
                 // window.location.href = 'hasil_input.php'
             },
             error: function(XMLHttpRequest, textStatus, errorThrown){
@@ -247,6 +266,8 @@
                     $("#list_rekom").show();
                     $("#tessen").html(msg);
                     hapusRute();
+                    deleteMarkers();
+                    hideLoader();
                     // window.location.href = 'hasil_input.php'
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown){
@@ -290,6 +311,16 @@
             }
         });
     }
+    function openLoader(){
+        $('#loader')
+            .show()  // show it initially
+        ;
+    }
+    function hideLoader(){
+        $('#loader')
+            .hide()  // show it initially
+        ;
+    }
 
 
     $(function() {
@@ -303,6 +334,8 @@
         });
 
         $("#cari").click(function() {
+            lokasiSaya = document.getElementById("lat").value + "," + document.getElementById("long").value;
+            openLoader();
             cariJarak();
             btsbwh = document.getElementById("bawah").value;
             btstgh = document.getElementById("tengah").value;
@@ -312,18 +345,22 @@
             bbtsats = document.getElementById("batas").value;
             // console.log(btsbwh); console.log(btsbwhtgh); console.log(btsatstgh); console.log(btsats);
             // cek();
-             
         });
+
+        $('#loader')
+            .hide()  // Hide it initially
+        ;
 
         $("body").on('click', '.detail', function() {
             lokasiSaya = ($("#lokasi").val() == '' ? lokasiSaya : $("#lokasi").val());
-            // menghapus rute sebelum.y yang di maps
+            // menghapus rute sebelum.y yang di     maps
             hapusRute();
             // menampilkan rute baru
             jarak($(this).data('alamat'));
         });
 
-         $(document).on('click', '.row list-group-item', function(e){
+         $(document).on('click', '.item', function(e){
+            // alert();
             hapusRute();
             var long = $(this).data('long');
             var lat = $(this).data('lat');

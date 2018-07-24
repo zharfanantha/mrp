@@ -29,6 +29,9 @@ $config = [
         'gmaps'=>[
             'class' => 'app\components\gmaps'
         ],
+        'sentimen'=>[
+            'class' => 'app\components\sentiment'
+        ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,

@@ -1,3 +1,12 @@
+<?php
+
+/* @var $this yii\web\View */
+
+use yii\helpers\Html;
+
+$this->title = 'Destination Category';
+?>
+
 <!-- end:fh5co-header -->
 <div class="fh5co-parallax" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/rumahkayu.jpg"; ?>);"data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -230,7 +239,7 @@
                             <p>Tempat wisata anak dan keluarga sangat mudah ditemukan di kota Malang. Malang dengan sebutan Kota Bunga adalah salah satu kota di Jawa Timur. Terletak di dataran tinggi sehingga memiliki udara yang sejuk dan nyaman untuk dikunjungi oleh anggota keluarga</p>
                             <p>Image Source : <img src="<?php echo Yii::$app->homeUrl."assets/images/search.png" ?>" >
                                               <img src="<?php echo Yii::$app->homeUrl."assets/images/gplus.png" ?>" ></p>
-                            <p><a href="#" class="btn btn-primary btn-luxe-primary">Find More</a></p>
+                            <p><a href="<?php echo Yii::$app->homeUrl ?>destination/hiburan" class="btn btn-primary btn-luxe-primary">Find More</a></p>
                         </div>
                     </div>
                     <div class="f-hotel">
@@ -244,7 +253,7 @@
                             <p>Tempat-tempat wisata air yang sering didatangi wisatawan ini tentunya memiliki pemandangan yang indah dan suasana yang membuat wisatawan semakin betah tentunya. Cocok untuk kalian yang memiliki hobi fotografi.</p>
                             <p>Image Source : <img src="<?php echo Yii::$app->homeUrl."assets/images/search.png" ?>" >
                                               <img src="<?php echo Yii::$app->homeUrl."assets/images/gplus.png" ?>" ></p>
-                            <p><a href="#" class="btn btn-primary btn-luxe-primary">Find More</a></p>
+                            <p><a href="<?php echo Yii::$app->homeUrl ?>destination/pemandian" class="btn btn-primary btn-luxe-primary">Find More</a></p>
                         </div>
                     </div>
                 </div>
@@ -262,7 +271,7 @@
                             <p>Malang Raya juga memiliki banyak peninggalan masa kerajaan yang patut dikunjungi. Selain ceritanya yang melegenda, candi peninggalan kerajaan yang masih berdiri kokoh itu juga menjadi salah satu ikon kebanggaan orang Malang.</p>
                             <p>Image Source : <img src="<?php echo Yii::$app->homeUrl."assets/images/search.png" ?>" >
                                               <img src="<?php echo Yii::$app->homeUrl."assets/images/gplus.png" ?>" ></p>
-                            <p><a href="#" class="btn btn-primary btn-luxe-primary">Find More</a></p>
+                            <p><a href="<?php echo Yii::$app->homeUrl ?>destination/budaya" class="btn btn-primary btn-luxe-primary">Find More</a></p>
                         </div>
                     </div>
                     <div class="f-hotel">
@@ -276,7 +285,7 @@
                             <p>Selain pemandangan alam yang menarik serta udaranya yang sejuk, alasan menyusuri tempat wisata religi menjadi agenda wajib dikunjungi. Bukan hanya sekadar bagian dari kegiatan religi saja, namun juga melihat keunikan dari masing-masing tempat yang mengusung budaya khas Jawa.</p>
                             <p>Image Source : <img src="<?php echo Yii::$app->homeUrl."assets/images/search.png" ?>" >
                                               <img src="<?php echo Yii::$app->homeUrl."assets/images/gplus.png" ?>" ></p>
-                            <p><a href="#" class="btn btn-primary btn-luxe-primary">Find More</a></p>
+                            <p><a href="<?php echo Yii::$app->homeUrl ?>destination/religi" class="btn btn-primary btn-luxe-primary">Find More</a></p>
                         </div>
                     </div>
                 </div>

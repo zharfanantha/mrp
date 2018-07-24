@@ -1,5 +1,5 @@
 <?php
-
+use yii\helpers\Html;
 /* @var $this yii\web\View */
 
 $this->title = 'Malang Raya Pride';
@@ -80,42 +80,42 @@ $this->title = 'Malang Raya Pride';
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/pantaibalekambang.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">Pantai Balekambang, Kab. Malang</a></h3>
+                        <h3><?= Html::a('Pantai Balekambang',['places/details','id' => '33']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/cobanrondo.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">Coban Rondo, Kota Batu</a></h3>
+                        <h3><?= Html::a("Coban Rondo",['places/details','id' => '12']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/jatimpark1.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">Jatim Park 1, Kota Batu</a></h3>
+                        <h3><?= Html::a("Jatim Park 1",['places/details','id' => '77']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/bns.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">BNS, Kota Batu</a></h3>
+                        <h3><?= Html::a("Batu Night Spectacular",['places/details','id' => '80']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/sendiki.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">Pantai Sendiki, Kab. Malang</a></h3>
+                        <h3><?= Html::a('Pantai Sendiki',['places/details','id' => '41']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/3warna.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">Pantai 3 Warna, Kab. Malang</a></h3>
+                        <h3><?= Html::a('Pantai 3 Warna',['places/details','id' => '35']) ?></h3>
                     </div>
                 </div>
             </div>
@@ -138,42 +138,42 @@ $this->title = 'Malang Raya Pride';
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/cobanputri.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">Coban Putri, Kota Batu</a></h3>
+                        <h3><?= Html::a("Coban Putri",['places/details','id' => '27']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/cobanbidadari.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">Coban Bidadari, Kab. Malang</a></h3>
+                        <h3><?= Html::a("Coban Bidadari",['places/details','id' => '32']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/cobanpelangi.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">Coban Pelangi, Kab. Malang</a></h3>
+                        <h3><?= Html::a("Coban Pelangi",['places/details','id' => '17']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/jatimpark3.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">Jatim Park 3, Kota Batu</a></h3>
+                        <h3><?= Html::a("Jatim Park 3",['places/details','id' => '78']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/jodipan.jpeg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">KWJ, Kota Malang</a></h3>
+                        <h3><?= Html::a("Kampung Warna Warni Jodipan",['places/details','id' => '89']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/sipelot.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><a href="#">Pantai Sipelot, Kab. Malang</a></h3>
+                        <h3><?= Html::a('Pantai Sipelot',['places/details','id' => '45']) ?></h3>
                     </div>
                 </div>
             </div>

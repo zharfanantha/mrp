@@ -2,12 +2,12 @@
 use yii\helpers\Html;
 /* @var $this yii\web\View */
 
-$this->title = 'Waterfall Destinations';
+$this->title = 'Entertainment Destinations';
 ?>
     <aside id="fh5co-hero" class="js-fullheight">
         <div class="flexslider js-fullheight">
             <ul class="slides">
-            <li style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/gintung.jpg"; ?>);">
+            <li style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/kebunteh.jpg"; ?>);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="col-md-12 col-md-offset-0 text-center slider-text">
@@ -24,7 +24,7 @@ $this->title = 'Waterfall Destinations';
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/kethak.jpg"; ?>);">
+            <li style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/sengkaling.jpg"; ?>);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="col-md-12 col-md-offset-0 text-center slider-text">
@@ -41,7 +41,7 @@ $this->title = 'Waterfall Destinations';
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/trisula.jpg"; ?>);">
+            <li style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/alunalunbatu.jpg"; ?>);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="col-md-12 col-md-offset-0 text-center slider-text">
@@ -69,52 +69,52 @@ $this->title = 'Waterfall Destinations';
                 <div class="col-md-12">
                     <div class="section-title text-center">
                         <br><br><br><br><br><br><br><br><br>
-                        <h2>Popular Waterfall Destinations</h2>
+                        <h2>Popular Entertainment Place Destinations</h2>
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-4">
-                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/cobanrondo.jpg"; ?>);">
+                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/park1.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><?= Html::a("Coban Rondo",['places/details','id' => '12']) ?></h3>
+                        <h3><?= Html::a("Jatim Park 1",['places/details','id' => '77']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/cobanputri.jpg"; ?>);">
+                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/bns1.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><?= Html::a("Coban Putri",['places/details','id' => '27']) ?></h3>
+                        <h3><?= Html::a("Batu Night Spectacular",['places/details','id' => '80']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/cobanbidadari.jpg"; ?>);">
+                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/alunalunbatu.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><?= Html::a("Coban Bidadari",['places/details','id' => '32']) ?></h3>
+                        <h3><?= Html::a("Alun Alun Kota Batu",['places/details','id' => '75']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/cobanpelangi.jpg"; ?>);">
+                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/paralayang.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><?= Html::a("Coban Pelangi",['places/details','id' => '17']) ?></h3>
+                        <h3><?= Html::a("Wisata Paralayang",['places/details','id' => '87']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/cobantundo.jpg"; ?>);">
+                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/ecogreen.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><?= Html::a("Coban Tundo",['places/details','id' => '19']) ?></h3>
+                        <h3><?= Html::a("Eco Green Park",['places/details','id' => '74']) ?></h3>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/rais.jpg"; ?>);">
+                    <div class="blog-grid" style="background-image: url(<?php echo Yii::$app->homeUrl."assets/images/objek/kwj.jpg"; ?>);">
                     </div>
                     <div class="desc">
-                        <h3><?= Html::a("Coban Rais",['places/details','id' => '14']) ?></h3>
+                        <h3><?= Html::a("Kampung Warna Warni Jodipan",['places/details','id' => '89']) ?></h3>
                     </div>
                 </div>
             </div>
@@ -129,7 +129,7 @@ $this->title = 'Waterfall Destinations';
                 <div class="col-md-12">
                     <div class="section-title text-center">
                         <br><br><br>
-                        <h2>All Waterfall Destinations</h2>
+                        <h2>All Entertainment Place Destinations</h2>
                     </div>
                 </div>
             </div>

@@ -50,11 +50,57 @@ class DestinationController extends Controller
     public function actionPantai()
     {
         $this->layout = "main";
-        return $this->render('pantai');
+        $dataobj = (new \yii\db\Query())
+                    ->select(['data_objek.*'])
+                    ->from('data_objek')
+                    ->where(['kategori'=> 'pantai'])
+                    ->all();
+        return $this->render('pantai',['dataobj'=>$dataobj]);
     }
     public function actionTerjun()
     {
-        return $this->render('airterjun');
+        $dataobj = (new \yii\db\Query())
+                    ->select(['data_objek.*'])
+                    ->from('data_objek')
+                    ->where(['kategori'=> 'Air Terjun'])
+                    ->all();
+        return $this->render('airterjun',['dataobj'=>$dataobj]);
+    }
+    public function actionPemandian()
+    {
+        $dataobj = (new \yii\db\Query())
+                    ->select(['data_objek.*'])
+                    ->from('data_objek')
+                    ->where(['kategori'=> 'pemandian'])
+                    ->all();
+        return $this->render('pemandian',['dataobj'=>$dataobj]);
+    }
+    public function actionBudaya()
+    {
+        $dataobj = (new \yii\db\Query())
+                    ->select(['data_objek.*'])
+                    ->from('data_objek')
+                    ->where(['kategori'=> 'budaya'])
+                    ->all();
+        return $this->render('budaya',['dataobj'=>$dataobj]);
+    }
+    public function actionReligi()
+    {
+        $dataobj = (new \yii\db\Query())
+                    ->select(['data_objek.*'])
+                    ->from('data_objek')
+                    ->where(['kategori'=> 'religi'])
+                    ->all();
+        return $this->render('religi',['dataobj'=>$dataobj]);
+    }
+    public function actionHiburan()
+    {
+        $dataobj = (new \yii\db\Query())
+                    ->select(['data_objek.*'])
+                    ->from('data_objek')
+                    ->where(['kategori'=> 'hiburan'])
+                    ->all();
+        return $this->render('hiburan',['dataobj'=>$dataobj]);
     }
 
 }

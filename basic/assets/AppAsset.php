@@ -28,6 +28,8 @@ class AppAsset extends AssetBundle
         'css/icomoon.css',
         'css/flexslider.css',
         'css/style.css',
+        'css/dataTables.bootstrap.min.css',
+        'css/pure-min.css',
         // 'css/owl.theme.default.min.css',
         // 'css/owl.carousel.css',
     ];
@@ -44,6 +46,8 @@ class AppAsset extends AssetBundle
         'js/selectFx.js',
         'js/jquery.flexslider-min.js',
         'js/custom.js',
+        'js/dataTables.bootstrap.min.js',
+        'js/jquery.dataTables.min.js',
         // 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAipJSjfkVSMGCmL10xbDjrJyTCxL3Uslc&language=in&region=ID',
         // 'js/map.js',
         // 'js/modernizr-2.6.2.min.js',
